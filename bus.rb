@@ -1,13 +1,13 @@
 
 class Bus
 
-  attr_reader :route_number, :destination, :passengers
+  attr_reader :route_number, :destination
 
-  def initialize(route_number, destination, passengers)
+  def initialize(route_number, destination)
 
     @route_number = route_number
     @destination = destination
-    @passengers = passengers = [ ]
+    @passengers = [ ]
 
   end
 
@@ -23,11 +23,15 @@ class Bus
     return "Brum Brum"
   end
 
-  def count_passengers()
+  def passenger_count()
     return @passengers.length
   end
 
-  
+  def pick_up(person)
+    @passengers << person
+  end
+
+
 
 
 
