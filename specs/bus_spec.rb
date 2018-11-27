@@ -5,7 +5,8 @@ require_relative("../bus")
 class BusTest < MiniTest::Test
 
   def setup()
-    @bus = Bus.new(22, "Ocean Terminal")
+
+    @bus = Bus.new(22, "Ocean Terminal", [ ])
 
   end
 
@@ -21,6 +22,10 @@ class BusTest < MiniTest::Test
 
   def test_bus_can_drive()
     assert_equal("Brum Brum", @bus.drive)
-  end 
+  end
+
+  def test_bus_has_passengers()
+    assert_equal([ ], @bus.passengers)
+  end
 
 end
