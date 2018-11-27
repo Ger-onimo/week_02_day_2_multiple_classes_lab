@@ -18,6 +18,10 @@ class Bus
   #   return @destination
   # end
 
+  def drive()
+    return "Brum Brum"
+  end
+
 
 
 
